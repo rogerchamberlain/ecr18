@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% First comes an example EPS file -- just ignore it and
+% proceed on the \documentclass line
+% your LaTeX will extract the file if required
+%
+\RequirePackage{fix-cm}
+%
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+%
+\smartqed  % flush right qed marks, e.g. at end of proof
+%
+\usepackage{graphicx}
+%
+% \usepackage{mathptmx}      % use Times fonts if available on your TeX system
+%
+% insert here the call for the packages your document requires
+%\usepackage{latexsym}
+% etc.
+\usepackage{gensymb}
+\usepackage{colortbl}
+
+%
+% please place your own definitions here and don't use \def but
+% \newcommand{}{}
+\newcommand{\FIXME}[1]{\textcolor{red}{FIXME: #1}}
+
+%
+% Insert the name of "your journal" with
+% \journalname{myjournal}
+%
+\begin{document}
+
+\title{Water in the Cloud: Understanding Water Chemistry via the
+Internet of Things\thanks{This paper builds on the earlier published work,
+Roger D. Chamberlain, Mike Chambers, Darren Greenwalt, Brett Steinbrueck,
+and Todd Steinbrueck, ``Water in the Cloud: Remote Understanding of Water
+Chemistry: Poster Abstract,'' in Proc.~of ACM/IEEE 2nd International
+Conference on Internet-of-Things Design and Implementation (IoTDI),
+April 2017, pp. 353-354. DOI: 10.1145/3054977.3057327}
+}
+%\subtitle{Do you have a subtitle?\\ If so, write it here}
+
+\titlerunning{Water in the Cloud}        % if too long for running head
+
+\author{Roger D. Chamberlain
+\and
+ Mike Chambers
+\and
+ Darren Greenwalt
+\and
+ Brett Steinbrueck
+\and
+ Todd Steinbrueck
+}
+
+\authorrunning{R.D. Chamberlain et al.} % if too long for running head
+
+\institute{R.D. Chamberlain \at
+              Washington University in St. Louis \\
+              and BECS Technology, Inc., St. Louis, MO USA \\
+              \email{roger@wustl.edu}
+           \and
+           M. Chambers \at
+              BECS Technology, Inc., St. Louis, MO USA \\
+              \email{mike\_c@becs.com}
+           \and
+           D. Greenwalt \at
+              BECS Technology, Inc., St. Louis, MO USA \\
+              \email{darren@becs.com}
+           \and
+           B. Steinbrueck \at
+              BECS Technology, Inc., St. Louis, MO USA \\
+              \email{brett@becs.com}
+           \and
+           T. Steinbrueck \at
+              BECS Technology, Inc., St. Louis, MO USA \\
+              \email{todd@becs.com}
+}
+
+\date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+
+
+\maketitle
+
+\begin{abstract}
+Water treatment is one of those essential elements of modern life
+that is taken for granted by the general population.
+We describe the ability to remotely understand and
+improve water chemistry using IoT devices attached to the cloud.
+The commercial benefits of this IoT connectivity are substantial,
+including: reduced chemical usage, improved chemical inventory 
+management, safer operation (fewer and less critical alarms),
+reduced maintenance costs, and higher quality water.
+
+\keywords{IoT \and Water chemistry}
+% \PACS{PACS code1 \and PACS code2 \and more}
+% \subclass{MSC code1 \and MSC code2 \and more}
+\end{abstract}
+
+\input{intro}
+\input{background}
+\input{cloud}
+\input{analytics}
+\input{conclude}
+
+
+%\begin{acknowledgements}
+%If you'd like to thank anyone, place your comments here
+%and remove the percent signs.
+%\end{acknowledgements}
+
+% BibTeX users please use one of
+%\bibliographystyle{spbasic}      % basic style, author-year citations
+\bibliographystyle{spmpsci}      % mathematics and physical sciences
+%\bibliographystyle{spphys}       % APS-like style for physics
+\bibliography{paper}   % name your BibTeX data base
+
+
+\end{document}
+% end of file template.tex
+

@@ -1,0 +1,40 @@
+\section{Data Analytics}
+\label{sec:analytics}
+
+While the summary data presentation is valuable to users, particularly for
+understanding the current state of the water chemistry that is immediately
+their responsibility, the true value of the data in the cloud is what it
+can potentially tell us about water treatment generally.
+By combining data from a number of controllers, we can learn more than
+it is possible to discern from any one example.
+
+We are aggregating controller data in two ways.  First, data that are
+from controllers all owned by an individual organization can be readily
+combined and mined for the benefit of that organization.  They own
+both the equipment and the data. Second, for those organizations that
+give permission, anonymized data sets can be made available for mining
+(e.g., see~\cite{horey2007,zhong2009k}), providing for a potentially
+much larger data set.
+
+There are a number of things we hope to learn from these data.
+\begin{itemize}
+\item The effectiveness of control decisions.  How well do different
+approaches work at maintaining water chemistry control?  What factors
+are important?
+\item How to recommend better control approaches.  How well will control
+approaches that are effective in one body of water transfer to another?
+\item How to minimize chemical usage.  The data logs not only contain
+sensor readings of water chemistry, but also log chemical feed rates
+and supplies.  Can we make water chemistry control more cost effective,
+by decreasing the consumables needed?
+\item How to predict problems. Alarm conditions (e.g., due to water
+chemistry being out of balance) require fast and expensive human response.
+Both public safety and maintenance effort required will be improved
+if we can predict problems prior to them reaching the level of an alarm.
+\end{itemize}
+
+Modern machine learning techniques are well suited to addressing the
+questions we pose above.
+While the data analysis has not yet happened, as the system is just
+now being deployed in the field, we are very optimistic that new insights
+will come from the data aggregation described above.
