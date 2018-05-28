@@ -7,7 +7,16 @@ requires both the technical ability to deliver them and the economic
 incentives to provide them.
 Clean water is a benefit to all, and generally is taken for granted
 by the citizenry of the industrialized world.
-Yet, \FIXME{talk about challenges and how IoT can make it better.}
+Yet, the maintenance of water chemistry across the aquatics industry
+is frequently the responsibility of a large number of small operators,
+which limits their ability to aggregate or learn from data that 
+represents a broad set of circumstances.
+
+Collecting, aggregating, and learning from data across the industry
+is now technically feasible via the internet of things,
+and this can be accomplished while
+preserving the confidentiality of individual organizations that
+contribute their data to the community.
 
 BECS Technology, Inc., is a firm that provides water chemistry monitoring
 and control equipment to the aquatics market, which includes a number
@@ -31,9 +40,35 @@ access capability satisfies the need for security yet balances
 that need with the equivalent need for ease of installation and
 maintenance~\cite{ezconnect,ccgss18}.
 
-Here, we describe EZAnalytics\texttrademark{}, the use of the EZConnect infrastructure to enable
+Here, we describe EZAnalytics\texttrademark{}, the use of the
+EZConnect infrastructure to enable
 cloud-based data logging and analytics on water chemistry data from a
 collection of controllers.
+With a definition of e-commerce that is broad enough to include commercial
+benefit due to the transfer of data over networks, 
+the EZAnalytics framework supports improved inventory control,
+reduced maintenance overhead, safer operation of water chemistry
+installations, and ultimately higher quality water.
 
-\FIXME{Introduce e-commerce angle.
-Ease of use is important in e-commerce~\cite{gefen2000}.}
+Yet, none of the benefits described above will be realized if
+the system is not straightforward to use.
+Gefen and Straub~\cite{gefen2000} provide a cautionary tale
+in which we must not only ensure that the system is easy to use,
+we must also be concerned about the \emph{perceived} ease of use.
+Individuals (and organizations) will not alter their standard
+practices unless the perceived usefulness of adopting a technological
+change outweighs the costs of adoption (strongly impacted by
+the perceived ease of learning and ease of use)~\cite{Davis89}.
+From their inception, both EZConnect and EZAnalytics have been
+designed to be well matched to their users' experience
+(e.g., they are designed for those whose knowledge is in
+water chemistry, not necessarily internet connectivity or data analysis).
+
+The paper is organized as follows. Section~\ref{sec:background}
+provides background information about the water chemistry controllers
+and how they are connected to the network.  This is followed by a
+description of related work in the area of e-commerce and IoT.
+Section~\ref{sec:cloud} tells how controller data are delivered to
+the cloud, and Section~\ref{sec:analytics} describes the benefits
+that can accrue from analyzing the data.
+Section~\ref{sec:conclude} concludes and describes future work.

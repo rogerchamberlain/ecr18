@@ -4,7 +4,8 @@
 While the summary data presentation is valuable to users, particularly for
 understanding the current state of the water chemistry that is immediately
 their responsibility, the true value of the data in the cloud is what it
-can potentially tell us about water treatment generally.
+can potentially tell us about water treatment generally, and the impact
+that it can have commercially.
 By combining data from a number of controllers, we can learn more than
 it is possible to discern from any one example.
 
@@ -38,3 +39,54 @@ questions we pose above.
 While the data analysis has not yet happened, as the system is just
 now being deployed in the field, we are very optimistic that new insights
 will come from the data aggregation described above.
+
+The first example of commercial impact is on inventory monitoring
+and resupply. It is frequently the case that chemical inventories
+are monitored by the controllers, while can straightforwardly enable
+automated re-ordering of chemical as well as scheduling of delivery.
+Not only does this reduce the manual workload associated with
+inventory control, it also reduces cases of inadvertent supply outages
+which can result in erroneous water chemistry.
+
+The second example is a significant reduction in maintenance costs
+for operators.  By alerting operators to potential
+issues with the water chemistry before it reaches alarm levels, 
+the organization can be much more flexible in scheduling service
+personnel. E.g., an operator can investigate the issue remotely,
+querying the controller for relevant information; the need for
+a dispatch to the physical site need not be an emergency, but can
+instead by folded into a more convenient schedule; and when the
+issue can be resolved in time, an alarm condition can be averted.
+
+The above to examples are cases where the data of interest is specific
+to the bodies of water (and associated controllers) that are the
+responsibility of an individual organization.  Tossing our net
+even wider, by aggregating data from disparate organizations, it
+is possible to gain even more benefit.
+
+As an example of benefits gained by data aggregation, improved
+control techniques can be more widely disseminated and used.
+In the context of recreational water, a million gallon competition
+pool doesn't react in the same way as a lazy river, or a shallow
+splash pool designed for the very young. Data aggregation across
+organizations allows for operators to see the effects of control
+techniques on each of these bodies of water separately, yet with
+sufficient examples of each type that general conclusions can
+reasonably be drawn.
+
+These control techniques might be simple things, such as parameter
+settings in the existing control algorithms, or they might be
+more involved, such as more sophisticated control algorithms
+(i.e., under what conditions time proportional control~\cite{McP13}
+is beneficial). The overall goal, however, is the same in each
+case. We want to improve water quality control by improved techniques
+driven by data analysis across multiple sites and organizations.
+
+The e-commerce implications of this can be significant, with the
+primary benefits being reduced chemical usage and reduced maintenance
+costs (due to fewer issues that need to be addressed).
+
+The above can all be accomplished while preserving the confidentiality
+of the data associated with specific sites.  There are a number
+of robust techniques now available for sharing aggregate data
+while maintaining originators' anonymity~\cite{horey2007,zhong2009k}.

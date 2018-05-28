@@ -15,9 +15,31 @@ It is currently possible to retrieve all of the above information from
 a controller to a desktop application or mobile app by connecting to
 the EZConnect server, providing appropriate authentication, and asking
 the controller for its internal data logs.
+This type of data request can result in both the console display of
+Figure~\ref{console} as well as the plots of the data logs as shown
+in Figure~\ref{graph}.
 
-Our current endeavor is
-to collect this information off of a collection of controllers (e.g., all
+While these data can be quite useful, there are a pair of issues that
+ultimately limit the impact that can be achieved.  First, the data
+collection activity is triggered by the user.  While the controller
+automatically maintains data logs, they are only delivered to a remote
+location when a user makes a specific request to download the data.
+
+Second, the data presentation is low-level.  By this we mean that
+the data logs are presented in a reasonably viewable graphical presentation,
+but there is little to no data analysis that is performed on the data.
+It is up to the user to discern meaning from the data as presented.
+Take, for example, the pH disturbance highlighted at noon over a 2~day
+period (in Figure~\ref{graph}).  An immediate question that might come
+to mind is, ``how general is this disturbance?'' It might be happening
+at additional sites.  It might have happened only those two days, or it
+might be part of a much longer trend.  Answering questions such as this require
+the user to download data from other controllers, or other timeframes
+on the same controllerr, all of which has historically been a manual,
+user-initiated operation.
+
+It is now possible to automatically
+collect this information from of a set of controllers (e.g., all
 owned by an individual organization), retain the collected data in
 the cloud, and realize benefit from the aggregation that is not realized
 from each individual controller's data in isolation.
