@@ -15,6 +15,10 @@ It is currently possible to retrieve all of the above information from
 a controller to a desktop application or mobile app by connecting to
 the EZConnect server, providing appropriate authentication, and asking
 the controller for its internal data logs.
+The requests are made using a proprietary language that is
+semantically limited (on purpose, for security
+reasons~\cite{ezconnect,ccgss18}) to communicating the current
+state as well as data logs for individual controllers.
 This type of data request can result in both the console display of
 Figure~\ref{console} as well as the plots of the data logs as shown
 in Figure~\ref{graph}.
@@ -35,7 +39,7 @@ to mind is, ``how general is this disturbance?'' It might be happening
 at additional sites.  It might have happened only those two days, or it
 might be part of a much longer trend.  Answering questions such as this require
 the user to download data from other controllers, or other timeframes
-on the same controllerr, all of which has historically been a manual,
+on the same controller, all of which has historically been a manual,
 user-initiated operation.
 
 It is now possible to automatically
@@ -66,10 +70,34 @@ outputs), and current values are supplemented with trends (indicated
 by directional arrows) and ranges of values for the previous time period.
 
 The above is facilitated by a number of concurrent processes running
-in the EZConnect server (which is deployed in the cloud).  First,
-a data logging process periodically communicates with each connected
-controller and retrieves the data logs for that immediate past period.
-Second, those data are inserted into a persistent database.  Third,
+on servers that are deployed in the cloud (see Figure~\ref{online}).
+On the left, we see the elements from Figure~\ref{ezconnect}.
+Applications can make a logical connection to individual controllers
+via the EZConnect server.
+In the center, the data server is executing a
+data logging process that periodically communicates with each connected
+controller (through the EZConnect server) and retrieves the data logs
+for the immediate past period.
+Those data are inserted into a persistent database, called the
+controller database in the figure.
+Finally,
 a report generator mines the database to generate the information needed
-for the summary view, and finally, the summary view is served to the
-user via a secure web server.
+for the summary views, and the summary view is served to the
+user via a secure web server, called the BECSys Online server.
+This latter server maintains the authorized users via an account
+database.
+
+\begin{figure}[htbp]
+ \center
+\includegraphics[width=\columnwidth]{EZAnalytics}
+    \caption{EZAnalytics infrastructure.}
+    \label{online}
+\end{figure}
+
+In the current instantiation, access to the EZAnalytics results (on the
+right side of Figure~\ref{online}) are
+made available to any device with a browser.  This is a distinction from
+the access on the left side of the figure, which requires custom
+software that understands the low-level specifics of each controller.
+Removing the requirement for customized software is one of the ways
+in which EZAnalytics is designed to be easier to learn and easier to use.
